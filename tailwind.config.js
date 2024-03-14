@@ -14,7 +14,7 @@ module.exports = {
         lexend: ["Lexend", "sans-serif"],
       },
       backgroundImage: {
-        "login-bg": `url(/assets/images/login-bg.jpg)`,
+        "login-bg": `url(/assets/login-bg.jpg)`,
       },
     },
   },
