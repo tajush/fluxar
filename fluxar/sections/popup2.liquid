@@ -1,0 +1,64 @@
+<div id="subscribeModal"
+        class="modal fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50">
+        <div class="home-modal-content max-w-3/4 mx-auto">
+          <!-- Modal content goes here -->
+          <section>
+            <div class="grid lg:grid-cols-2 grid-cols-1">
+              <div class="relative">
+                <img class="w-full h-full" src="{{'news-popup-img.png'|asset_url}}" alt="cart img">
+                <div>
+                  <img class="block lg:hidden absolute top-6 right-6 cursor-pointer" id="mobile-closeModal"
+                    src="{{'cancel-white.svg'|asset_url}}" alt="">
+                </div>
+              </div>
+
+              <div class="bg-white lg:py-16 py-10 relative lg:pl-12 pl-4 pr-4">
+                <img id="desktop-closeModal" class="lg:block hidden absolute top-6 right-6 cursor-pointer"
+                  src="{{'cancel.svg'|asset_url}}" alt="">
+                <div class="max-w-[560px]">
+                  <header class="lg:text-left text-center">
+                    <h2 class="subscribe-header font-normal">Subscribe & Enjoy</h2>
+                    <h3 class="subscribe-header font-semibold">10% off</h3>
+                    <p class=" text-gray text-lg font-jost lg:mt-3.5 mt-2">Join our email list and be first to know
+                      about exciting sales, gifting and more. Plus, get 10% off your next purchase online over $90.</p>
+                  </header>
+
+                  <div class="flex items-center relative lg:mt-24 mt-10 lg:mb-24 mb-5">
+                    <input type="text"
+                      class="w-full border border-black px-4 py-2.5 focus:outline-none focus:border-blue-500"
+                      placeholder="Enter email address">
+                    <button class="bg-black flex text-white px-7 py-2.5 absolute top-px right-0">
+                      <span class="uppercase mr-2">get 10% off </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
+                        <path
+                          d="M18.8533 4.18312L12.4497 3.62285C12.202 3.58175 11.9679 3.74917 11.9269 3.99683C11.8858 4.24446 12.0532 4.47856 12.3009 4.51964C12.3239 4.52346 12.3473 4.52553 12.3707 4.52575L17.6822 4.99369L3.89716 16.5608C3.70487 16.7221 3.67979 17.0088 3.84116 17.2011C4.00253 17.3934 4.28922 17.4185 4.48151 17.2572L18.2666 5.69009L17.8021 10.9987C17.761 11.2463 17.9285 11.4804 18.1761 11.5215C18.4238 11.5626 18.6579 11.3952 18.6989 11.1475C18.7028 11.1244 18.7048 11.1011 18.705 11.0777L19.2653 4.67402C19.2864 4.42499 19.1023 4.20565 18.8533 4.18312Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <p class="primary-subitle mb-1">Offer valid for new subscribers only.</p>
+                    <p class="primary-subitle mb-6">You can unsubscribe at any time. View our <a class="underline"
+                        href="#">Privacy Policy</a> & <a class="underline" href="#">Contact Details.</a></p>
+                    <p class="text-sm font-jost">* Conditions apply. Offer sent via email. See your welcome email for
+                      details.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+{% schema %}
+{
+    "name": "popup",
+    "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "popup2"
+            }
+        ]
+}
+{% endschema %}

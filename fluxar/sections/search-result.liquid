@@ -1,0 +1,169 @@
+{% comment %} <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+<section class="container max-w-7xl m-auto px-4">
+  <div id="searchElement">
+    <div class="absolute top-5 right-5 cursor-pointer lg:hidden block" id="closeBtnMobile">
+      <img src="{{'cancel.svg' |   asset_url}}" alt="">
+    </div>
+    <section class="lg:px-16 px-0">
+      <div class="flex lg:justify-between justify-center items-center lg:py-36 py-12">
+        <h3 class="lg:text-3xl text-base font-jost text-black uppercase">what are you looking for?</h3>
+        <div class="cursor-pointer lg:block hidden" id="closeBtnDesktop">
+          <img src="{{'cancel.svg' | asset_url}}" alt="">
+        </div>
+      </div>
+
+      <div class="relative w-full mb-10">
+        <input
+          class="border-b w-full border-[w-full] py-5 focus:border-blue-500 outline-none focus:ring-0"
+          type="text"
+          value="Blue sunglass"
+        >
+        <p class="absolute top-5 right-0 text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+            <path
+                d="M8.87337 17.7306C6.42557 17.7306 4.35393 16.8819 2.65845 15.1846C0.962974 13.4873 0.115234 11.4392 0.115234 9.04034C0.115234 6.64147 0.963891 4.59338 2.6612 2.89607C4.35852 1.19875 6.41226 0.350098 8.82245 0.350098C11.2326 0.350098 13.2807 1.19875 14.9667 2.89607C16.6527 4.59338 17.4957 6.64317 17.4957 9.04543C17.4957 10.0152 17.3373 10.9526 17.0205 11.8579C16.7036 12.7631 16.2284 13.6118 15.5947 14.4038L23.8097 22.5509C24.0134 22.7446 24.1152 22.991 24.1152 23.2902C24.1152 23.5895 24.0134 23.8409 23.8097 24.0446C23.606 24.2483 23.3546 24.3501 23.0554 24.3501C22.7561 24.3501 22.5097 24.2483 22.3161 24.0446L14.135 15.8635C13.4561 16.4519 12.6645 16.9102 11.7602 17.2384C10.8559 17.5665 9.89361 17.7306 8.87337 17.7306ZM8.83942 15.6938C10.6782 15.6938 12.2411 15.0432 13.5282 13.7419C14.8154 12.4406 15.4589 10.8734 15.4589 9.04034C15.4589 7.20724 14.8154 5.64006 13.5282 4.33878C12.2411 3.03751 10.6782 2.38687 8.83942 2.38687C6.98181 2.38687 5.40284 3.03751 4.10249 4.33878C2.80217 5.64006 2.15201 7.20724 2.15201 9.04034C2.15201 10.8734 2.80217 12.4406 4.10249 13.7419C5.40284 15.0432 6.98181 15.6938 8.83942 15.6938Z"
+                fill="#6D7175" />
+          </svg>
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-4 grid-cols-1 gap-x-7">
+        <div class="mb-5 lg:block flex items-center">
+          <div>
+            {% comment %} <!-- desktop img --> {% endcomment %}
+            <img
+              class="mb-5 w-full lg:block hidden"
+              src="{{'search-sunglass-img1.png' | asset_url }}"
+              alt="search sunglass image"
+            >
+
+            {% comment %} <!-- desktop img --> {% endcomment %}
+            {% comment %} <!-- mobile img --> {% endcomment %}
+            <img
+              class="w-full lg:hidden block"
+              src="{{'mobile-search-sunglass-img1.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %} <!-- mobile img --> {% endcomment %}
+          </div>
+          <div class="lg:ml-0 ml-3">
+            <p class="mb-1 text-base text-black font-jost">BlueTide Sunglasses</p>
+            <p class="text-base text-black font-jost">$ 32.00</p>
+          </div>
+        </div>
+
+        <div class="mb-5 lg:block flex items-center">
+          <div>
+            {% comment %} <!-- desktop img --> {% endcomment %}
+            <img
+              class="mb-5 w-full lg:block hidden"
+              src="{{'search-sunglass-img2.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %}
+              <!-- desktop img -->
+              <!-- mobile img -->
+            {% endcomment %}
+            <img
+              class="w-full lg:hidden block"
+              src="{{'mobile-search-sunglass-img2.png'|   asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %} <!-- mobile img --> {% endcomment %}
+          </div>
+          <div class="lg:ml-0 ml-3">
+            <p class="mb-1 text-base text-black font-jost">BlueWave Shades</p>
+            <p class="text-base text-black font-jost">$ 96.00</p>
+          </div>
+        </div>
+
+        <div class="mb-5 lg:block flex items-center">
+          <div>
+            {% comment %} <!-- desktop img --> {% endcomment %}
+            <img
+              class="mb-5 w-full lg:block hidden"
+              src="{{'search-sunglass-img3.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %}
+              <!-- desktop img -->
+              <!-- mobile img -->
+            {% endcomment %}
+            <img
+              class="w-full lg:hidden block"
+              src="{{'mobile-search-sunglass-img3.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %} <!-- mobile img --> {% endcomment %}
+          </div>
+          <div class="lg:ml-0 ml-3">
+            <p class="mb-1 text-base text-black font-jost">BlueSky Vision</p>
+            <p class="text-base text-black font-jost">$ 156.00</p>
+          </div>
+        </div>
+
+        <div class="mb-5 lg:block flex items-center">
+          <div>
+            {% comment %} <!-- desktop img --> {% endcomment %}
+            <img
+              class="mb-5 w-full lg:block hidden"
+              src="{{'search-sunglass-img4.png'| asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %}
+              <!-- desktop img -->
+              <!-- mobile img -->
+            {% endcomment %}
+            <img
+              class="w-full lg:hidden block"
+              src="{{'mobile-search-sunglass-img4.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %} <!-- mobile img --> {% endcomment %}
+          </div>
+          <div class="lg:ml-0 ml-3">
+            <p class="mb-1 text-base text-black font-jost">BlueVista Eyewear</p>
+            <p class="text-base text-black font-jost">$ 39.00</p>
+          </div>
+        </div>
+
+        <div class="mb-5 lg:block flex items-center">
+          <div>
+            {% comment %} <!-- desktop img --> {% endcomment %}
+            <img
+              class="mb-5 w-full lg:block hidden"
+              src="{{'search-sunglass-img6.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %}
+              <!-- desktop img -->
+              <!-- mobile img -->
+            {% endcomment %}
+            <img
+              class="w-full lg:hidden block"
+              src="{{'mobile-search-sunglass-img5.png'|asset_url}}"
+              alt="search sunglass image"
+            >
+            {% comment %} <!-- mobile img --> {% endcomment %}
+          </div>
+          <div class="lg:ml-0 ml-3">
+            <p class="mb-1 text-base text-black font-jost">BlueBeam Optics</p>
+            <p class="text-base text-black font-jost">$ 68.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "search-result",
+  "settings": [],
+  "presets": [
+    {
+      "name": "search-result"
+    }
+  ]
+}
+{% endschema %}

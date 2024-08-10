@@ -1,0 +1,145 @@
+<div class="container max-w-7xl m-auto px-4">
+  {% comment %} <!----Customer Review--> {% endcomment %}
+  <section class="lg:py-20 py-14">
+    <header class="text-center">
+      <h2 class="lg:text-3xl text-xl lg:leading-[42px] uppercase">how customers inspire us</h2>
+    </header>
+    <div class="review-wrapper lg:py-20 py-10">
+      <div class="review-slider">
+        <div>
+          <div class="lg:flex items-center">
+            <figure>
+              <img
+                class="w-full"
+                src="{{'review-img1.png'| asset_url}}"
+                alt="">
+            </figure>
+
+            {% comment %} <!-- desktop --> {% endcomment %}
+            <div class="ml-[35px] lg:block hidden">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-xl font-jost">“I appreciate the thoughtful details of the clothing. Well
+ 
+                    made and versatile”</p>
+              <p class="text-black">Jhon Mayer, San Francisco</p>
+            </div>
+            {% comment %} <!-- desktop -->
+                            <!-- mobile --> {% endcomment %}
+            <div class="flex lg:hidden flex-col justify-center items-center mt-10">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-center text-lg font-jost my-7">“I appreciate the thoughtful details of the
+ 
+                    clothing. Well made and versatile”</p>
+              <p class="text-black">Jhon Mayer, San Francisco</p>
+            </div>
+          {% comment %} <!-- mobile --> {% endcomment %}
+          </div>
+        </div>
+
+        <div>
+          <div class="lg:flex items-center">
+            <figure>
+              <img
+                class="w-full"
+                src="{{'review-img2.png'| asset_url}}"
+                alt="">
+            </figure>
+
+            {% comment %} <!-- desktop --> {% endcomment %}
+            <div class="ml-[35px] lg:block hidden">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-xl font-jost">“Comfortable and versatile - pairs with any buttondown and
+ 
+                    also looks great fully zipped up.”</p>
+              <p class="text-black">King Joshep, Alabama</p>
+            </div>
+            {% comment %} <!-- desktop -->
+                            <!-- mobile --> {% endcomment %}
+            <div class="flex lg:hidden flex-col justify-center items-center mt-10">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-center text-lg font-jost my-7">“I appreciate the thoughtful details of the
+ 
+                    clothing. Well made and versatile”</p>
+              <p class="text-black">Jhon Mayer, San Francisco</p>
+            </div>
+          {% comment %} <!-- mobile --> {% endcomment %}
+          </div>
+        </div>
+
+        <div>
+          <div class="lg:flex items-center">
+            <figure>
+              <img
+                class="w-full"
+                src="{{'review-img1.png'| asset_url}}"
+                alt="">
+            </figure>
+
+            {% comment %} <!-- desktop --> {% endcomment %}
+            <div class="ml-[35px] lg:block hidden">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-xl font-jost">“I appreciate the thoughtful details of the clothing. Well
+ 
+                    made and versatile”</p>
+              <p class="text-black">Jhon Mayer, San Francisco</p>
+            </div>
+            {% comment %} <!-- desktop -->
+                            <!-- mobile --> {% endcomment %}
+            <div class="flex lg:hidden flex-col justify-center items-center mt-10">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-center text-lg font-jost my-7">“I appreciate the thoughtful details of the
+ 
+                    clothing. Well made and versatile”</p>
+              <p class="text-black">Jhon Mayer, San Francisco</p>
+            </div>
+          {% comment %} <!-- mobile --> {% endcomment %}
+          </div>
+        </div>
+
+        <div>
+          <div class="lg:flex items-center">
+            <figure>
+              <img
+                class="w-full"
+                src="{{'review-img2.png'| asset_url}}"
+                alt="">
+            </figure>
+
+            {% comment %} <!-- desktop --> {% endcomment %}
+            <div class="ml-[35px] lg:block hidden">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-xl font-jost">“Comfortable and versatile - pairs with any buttondown and
+ 
+                    also looks great fully zipped up.”</p>
+              <p class="text-black">King Joshep, Alabama</p>
+            </div>
+            {% comment %} <!-- desktop -->
+                            <!-- mobile --> {% endcomment %}
+            <div class="flex lg:hidden flex-col justify-center items-center mt-10">
+              <img src="{{'rating.svg'| asset_url}}" alt="">
+              <p class="text-black text-center text-lg font-jost my-7">“I appreciate the thoughtful details of the
+ 
+                    clothing. Well made and versatile”</p>
+              <p class="text-black">Jhon Mayer, San Francisco</p>
+            </div>
+          {% comment %} <!-- mobile --> {% endcomment %}
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-dots-container"></div>
+    </div>
+  </section>
+{% comment %} <!----Customer Review--> {% endcomment %}
+</div>
+{% schema %}
+  {
+    "name": "customer-review",
+    "settings": [],
+    "presets": [
+      {
+        "name": "customer-review"
+      }
+    ]
+  }
+{% endschema %}

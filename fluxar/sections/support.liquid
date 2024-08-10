@@ -1,0 +1,88 @@
+<section class="container max-w-7xl m-auto px-4 lg:py-24 py-14 lg:block hidden">
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-x-4">
+      <div class="flex flex-col justify-center items-center">
+        <figure class="mb-[25px]">
+          <img src="{{'shipping.svg'| asset_url}}" alt="shipping">
+        </figure>
+        <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">Free Shipping</h4>
+        <p class="text-[#6D7175] text-[14px] leading-[20px]">Returns within 30 days receive a full refund.</p>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
+        <figure class="mb-[25px]">
+          <img src="{{'support.svg'| asset_url}}" alt="support">
+        </figure>
+        <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">24/7 support</h4>
+        <p class="text-[#6D7175] text-[14px] leading-[20px]">Call us anytime at 1(800) 555-1234.</p>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
+        <figure class="mb-[25px]">
+          <img src="{{'gift-card.svg'| asset_url}}" alt="gift card">
+        </figure>
+        <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">Gift Cards</h4>
+        <p class="text-[#6D7175] text-[14px] leading-[20px]">Use & share gift cards with families</p>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
+        <figure class="mb-[25px]">
+          <img src="{{'support-rating.svg'| asset_url}}" alt="support rating">
+        </figure>
+        <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">5.0 star rating</h4>
+        <p class="text-[#6D7175] text-[14px] leading-[20px]">We care our customers & they also</p>
+      </div>
+    </div>
+  </section>
+  {% comment %} <!-- desktop support -->
+
+  <!-- mobile-support --> {% endcomment %}
+  <section class="container max-w-7xl m-auto px-4 lg:py-24 py-14 lg:hidden inline-block">
+    <div class="support-wrapper">
+      <div class="support-slider">
+        <div class="flex flex-col justify-center items-center">
+          <figure class="mb-[25px]">
+            <img src="{{'shipping.svg'| asset_url}}" alt="shipping">
+          </figure>
+          <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">Free Shipping</h4>
+          <p class="text-[#6D7175] text-[14px] leading-[20px]">Returns within 30 days receive a full refund.</p>
+        </div>
+
+        <div class="flex flex-col justify-center items-center">
+          <figure class="mb-[25px]">
+            <img src="{{'support.svg'| asset_url}}" alt="support">
+          </figure>
+          <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">24/7 support</h4>
+          <p class="text-[#6D7175] text-[14px] leading-[20px]">Call us anytime at 1(800) 555-1234.</p>
+        </div>
+
+        <div class="flex flex-col justify-center items-center">
+          <figure class="mb-[25px]">
+            <img src="{{'gift-card.svg'|asset_url}}" alt="gift card">
+          </figure>
+          <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">Gift Cards</h4>
+          <p class="text-[#6D7175] text-[14px] leading-[20px]">Use & share gift cards with families</p>
+        </div>
+
+        <div class="flex flex-col justify-center items-center">
+          <figure class="mb-[25px]">
+            <img src="{{'support-rating.svg'|  asset_url}}" alt="support rating">
+          </figure>
+          <h4 class="text-[#202223] text-[18px] leading-[30px] mb-1">5.0 star rating</h4>
+          <p class="text-[#6D7175] text-[14px] leading-[20px]">We care our customers & they also</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% schema %}
+{
+    "name": "support",
+    "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "support"
+            }
+        ]
+}
+{% endschema %}

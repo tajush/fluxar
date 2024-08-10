@@ -1,0 +1,222 @@
+{%- if section.settings.show_popup -%}
+  {%- unless section.settings.show_only_on_index and template != 'index' -%}
+    {%- unless section.settings.show_only_for_visitors and customer -%}
+      {% capture section_settings %}
+        {
+          "apparitionDelay": {{ section.settings.apparition_delay | json }},
+          "showOnlyOnce": {{ section.settings.show_only_once | json }}
+        }
+      {% endcapture %}
+
+      <aside
+        class="NewsletterPopup"
+        data-section-id="{{ section.id }}"
+        data-section-type="newsletter-popup"
+        data-section-settings='{{ section_settings }}'
+        aria-hidden="true">
+        <button class="NewsletterPopup__Close" data-action="close-popup">{% render 'icon' with 'close' %}</button>
+
+        {%- if section.settings.title != blank -%}
+          <h2 class="NewsletterPopup__Heading Heading u-h2">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.content != blank -%}
+          <div class="NewsletterPopup__Content">
+            {{ section.settings.content }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.show_newsletter -%}
+          {%- form 'customer'
+            , id: 'newsletter-popup'
+            , action: '/contact#newsletter-popup'
+            , class: 'NewsletterPopup__Form' -%}
+            {%- if form.posted_successfully? -%}
+              <p class="Form__Alert Alert Alert--success">{{ 'general.popup.success' | t }}</p>
+            {%- else -%}
+              <input
+                type="hidden"
+                name="contact[tags]"
+                value="newsletter">
+
+              <input
+                type="email"
+                name="contact[email]"
+                class="Form__Input"
+                required="required"
+                aria-label="{{ 'general.popup.email_placeholder' | t }}"
+                placeholder="{{ 'general.popup.email_placeholder' | t }}">
+              <button class="Form__Submit Button Button--primary Button--full" type="submit">{{ 'general.popup.submit' | t }}</button>
+            {%- endif -%}
+          {%- endform -%}
+        {%- endif -%}
+      </aside>
+    {%- endunless -%}
+  {%- endunless -%}
+{%- endif -%}
+<style>
+  .NewsletterPopup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease
+    , transform 0.3s ease;
+  }
+
+  .NewsletterPopup[aria-hidden="false"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .NewsletterPopup__Close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .NewsletterPopup__Heading {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .NewsletterPopup__Content {
+    margin-bottom: 20px;
+  }
+
+  .NewsletterPopup__Form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Form__Input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .Form__Submit {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .Form__Submit:hover {
+    background-color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .NewsletterPopup {
+      width: 90%;
+      right: 5%;
+      bottom: 10px;
+    }
+  }
+
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  var popup = document.querySelector('.NewsletterPopup');
+  if (!popup) return;
+  
+  var settings = JSON.parse(popup.getAttribute('data-section-settings'));
+  var closeButton = popup.querySelector('[data-action="close-popup"]');
+  
+  // Function to show the popup
+  function showPopup() {
+    if (!settings.showOnlyOnce || !localStorage.getItem('popupShown')) {
+      popup.setAttribute('aria-hidden', 'false');
+      localStorage.setItem('popupShown', 'true');
+    }
+  }
+  
+  // Function to close the popup
+  function closePopup() {
+    popup.setAttribute('aria-hidden', 'true');
+  }
+  
+  // Close the popup when the close button is clicked
+  closeButton.addEventListener('click', closePopup);
+  
+  // Show the popup after the defined delay
+  setTimeout(showPopup, settings.apparitionDelay * 1000);
+  });
+</script>
+{% schema %}
+  {
+    "name": "Popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_popup",
+        "label": "Enable",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_only_on_index",
+        "label": "Show only on home page",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_only_for_visitors",
+        "label": "Show only for visitors",
+        "info": "Customers who have created an account on your shop won't see it.",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_only_once",
+        "label": "Show only once per customer",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Popup"
+      }, {
+        "type": "richtext",
+        "id": "content",
+        "label": "Text",
+        "default": "<p>You can use this popup to display some useful information to your customers.</p>"
+      }, {
+        "type": "checkbox",
+        "id": "show_newsletter",
+        "label": "Show newsletter form",
+        "default": true
+      }, {
+        "type": "range",
+        "id": "apparition_delay",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "unit": "sec",
+        "label": "Delay until the popup appears",
+        "default": 5
+      }
+    ],
+    "presets": [
+      {
+        "name": "popup"
+      }
+    ]
+  }
+{% endschema %}

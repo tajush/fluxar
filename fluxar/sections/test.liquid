@@ -1,108 +1,107 @@
-{% comment %} 
-  <div class="container max-w-7xl m-auto px-4 "> 
-  <div class="bg-[#202223] text-white text-center text-sm lg:py-4 py-2.5"> 
-  APP EXCLUSIVE DISCOUNT 20% OFF: 
-  <a href="#" class="border-b-[1px] border-b-white mr-2 lg:inline-block hidden">Download and Checkout with our new Mobile APP</a> 
-  <i class="fa fa-mobile-screen-button lg:inline-block hidden" aria-hidden="true"></i> 
-  </div>
-  </div>
-  {% schema %} 
-  { 
-  "name": "announcement-bar", 
-  "settings": [], 
-  "presets": [ 
-  { 
-  "name": "announcement-bar" 
-  } 
-  ] 
-  }
-  {% endschema %} 
-{% endcomment %}
-
-{%- if section.settings.announcement_bar -%}
-  {%- liquid
-    assign announcement_bar_layout = section.settings.announcement_bar_layout
-    assign speed = section.settings.speed
-    assign direction = section.settings.direction
+{% if section.settings.test6 %}
+  {% liquid
+    assign announcement_bar_layout =section.settings.announcement_bar_layout
+    assign speed =section.settings.speed
+    assign direction=section.settings.direction
     assign show_announcement_bar = true
-
-    assign autoplay = section.settings.autoplay
+    assign autoplay=section.settings.autoplay
     if section.settings.announcement_bar_homepage_only
-      if template == 'index'
+      if template == "index"
         assign show_announcement_bar = true
       else
         assign show_announcement_bar = false
-      endif
-    endif
 
-    if autoplay
-      assign autoplay = section.settings.autoplay_length | times: 1000
+      endif
+
     endif
-  -%}
-  {%- if show_announcement_bar -%}
+    if autoplay
+      assign autoplay = section.settings.autoplay_length | times: 100
+
+    endif
+  %}
+  {% if show_announcement_bar %}
     {{- 'announcement-bar.css' | asset_url | stylesheet_tag -}}
     <div class="announcement-bar">
       <div class="announcement-bar--inner direction-{{ direction }} announcement-bar--{{ announcement_bar_layout }}" style="--marquee-speed: {{ speed }}">
-        {%- if announcement_bar_layout == 'marquee' -%}
-          {%- capture scrolling_text -%}
-					<div>
-						{%- liquid
-								assign index = 0
-								assign size = section.blocks.size
-						 -%}
-						{%- for index in (0..size) -%}
-							<div class="announcement-bar--item" {{ section.blocks[index].shopify_attributes }}>
-								{%- if section.blocks[index].settings.link -%}
-									<a href="{{ section.blocks[index].settings.link }}" target="_blank">
-								{%- endif -%}
-                {{- section.blocks[index].settings.text -}}
-								{%- if section.blocks[index].settings.icon -%}{% render 'svg-icons-inline', icon: section.blocks[index].settings.icon %}{%- endif -%}
-								{%- if section.blocks[index].settings.link -%}
-									</a>
-								{%- endif -%}
-							</div>
-						{%- endfor -%}
-					</div>
-					{%- endcapture -%}
-          {{ scrolling_text -}}
-          {{- scrolling_text -}}
-          {{- scrolling_text }} 
-        {%- elsif announcement_bar_layout == 'carousel' -%}
-          <slide-show class="carousel" data-autoplay="{{ autoplay }}">
-            {%- for block in section.blocks -%}
-              <div class="announcement-bar--item carousel__slide" {{ block.shopify_attributes }}>
-                {%- if block.settings.link -%}
-                  <a href="{{ block.settings.link }}" target="_blank">
-                {%- endif -%}
-                {{- block.settings.text -}}
-                {%- if block.settings.icon -%}
-                  {% render 'svg-icons-inline'
-                    , icon: block.settings.icon %}{%- endif -%}
-               
-                {%- if block.settings.link -%}
-                  </a>
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-            {%- if section.blocks.size > 1 -%}
-              <div class="flickity-nav flickity-prev" tabindex="0">{% render 'svg-icons' with 'thb-caret-left' %}</div>
-              <div class="flickity-nav flickity-next" tabindex="0">{% render 'svg-icons' with 'thb-caret-right' %}</div>
-            {%- endif -%}
-          </slide-show>
-        {%- endif -%}
+        {% if announcement_bar_layout == 'marquee' %}
+          {% capture scrolling_text %}
+            <div>
+              {% liquid
+                assign index =0
+                assign size = section.blocks.size 
+              %}
+              {% for index in (0..size) %}
+                <div class="announcement_bar--item"{{section.blocks[index].shopify_attributes}}>
+                  {% if section.blocks[index].settings.link %}
+                    <a href="{{section.blocks[index].settings.link}}" target="_blank"> 
+                  {% endif %}
+                    {{section.blocks[index].settings.text}}
+                    {% if section.blocks[index].settings.icon %}
+                      {% render 'svg-icons-inline',icon:section.blocks[index].settings.icon %}
+                      
+                    {% endif %}
+                  {% if section.blocks[index].settings.link %}
+                    </a>
+                    
+                  {% endif %}
+
+                </div>
+                
+              {% endfor %}
+
+            </div>
+            
+          {% endcapture %}
+          {{ scrolling_text }}
+          {% elsif announcement_bar_layout=='carousel' %}
+            <slide-show class="carousel {% if condition %}
+              
+            {% endif %}" data-autoplay="{{autoplay}}">
+              {% for block in section.blocks %}
+                <div class="announcement-bar--item carousel__slide" {{block.shopify_attributes}}>
+                  {% if block.settings.link %}
+                    <a href="{{block.settings.link}}" target="_blank">
+                    
+                  {% endif %}
+                  {{block.settings.text}}
+                  {% if block.settings.icon %}
+                    {% render 'svg-icons-inline'
+                    , icon: block.settings.icon %}
+                    
+                    {% endif %}
+                    {% if block.settings.link %}
+                      </a>
+                      
+                    {% endif %}
+
+
+                </div>
+                
+              {% endfor %}
+
+            </slide-show>
+            
+          
+
+        {% endif %}
+
       </div>
+
     </div>
-  {%- endif -%}
-{%- endif -%}
+
+
+  {% endif %}
+{% endif %}
+
 {% schema %}
   {
-    "name": "Announcement bar",
+    "name": "test5",
     "class": "announcement-bar-section",
     "max_blocks": 5,
     "settings": [
       {
         "type": "checkbox",
-        "id": "announcement_bar",
+        "id": "test6",
         "label": "Enable announcement bar",
         "default": true
       },
@@ -347,18 +346,13 @@
         ]
       }
     ],
-    "default": {
-      "blocks": [
-        {
-          "type": "text"
-        }, {
-          "type": "text"
-        }, {
-          "type": "text"
-        }, {
-          "type": "text"
-        }
-      ]
-    }
+
+
+    "presets": [
+      {
+        "name": "test55"
+      }
+    ]
+
   }
 {% endschema %}

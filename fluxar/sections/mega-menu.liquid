@@ -1,0 +1,1087 @@
+
+<div class="container max-w-7xl m-auto px-4">
+    <div class="flex justify-between items-center py-[20px]">
+      <div id="showButton" class="lg:hidden inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+          <path d="M0 15H20M0 1H20M0 8H20" stroke="#202223" stroke-width="2" />
+        </svg>
+      </div>
+      {% comment %} <!-- mobile nav menu --> {% endcomment %}
+      <div id="navList">
+        <div class="mt-12">
+          <div class="faq-item border-none shadow-none">
+            <div class="flex border-[#D9D9D9] justify-between items-center py-5 cursor-pointer">
+              <h3 class="text-[16px] leading-[16px] uppercase">
+                Categories
+              </h3>
+              <i class="fa-solid fa-chevron-down rotate-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="max-w-2xl mx-auto mt-2">
+                <div class="mb-5">
+                  <div class="flex justify-between">
+                    <p class="uppercase text-sm text-black font-jost font-semibold">
+                      summer collection
+                    </p>
+                    <div id="toggleButton" onclick="summerToggle()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#202223" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div id="summer">
+                    <ul class="list-none ml-4 mt-3">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Luna Lace</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Bella Blush</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <div class="flex justify-between">
+                    <p class="uppercase text-sm text-black font-jost font-semibold">
+                      Bikini Collection
+                    </p>
+                    <div id="toggleButton" onclick="bikiniToggle()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#202223" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div id="bikini">
+                    <ul class="list-none ml-4 mt-3">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Bella Blush</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <div class="flex justify-between">
+                    <p class="uppercase text-sm text-black font-jost font-semibold">
+                      tops collection
+                    </p>
+                    <div id="toggleButton" onclick="topsToggle()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#202223" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div id="tops">
+                    <ul class="list-none ml-4 mt-3">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Luna Lace</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between">
+                    <p class="uppercase text-sm text-black font-jost font-semibold">
+                      shoe collection
+                    </p>
+                    <div id="toggleButton" onclick="shoeToggle()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#202223" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div id="shoe">
+                    <ul class="list-none ml-4 mt-3">
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item border-none shadow-none">
+            <div class="flex border-[#D9D9D9] justify-between items-center py-5 cursor-pointer">
+              <h3 class="text-[16px] leading-[16px] uppercase">man</h3>
+              <i class="fa-solid fa-chevron-down rotate-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="max-w-2xl mx-auto mt-2">
+                <div class="mb-7">
+                  <div id="man">
+                    <ul class="list-none">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Luna Lace</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Bella Blush</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item border-none shadow-none">
+            <div class="flex border-[#D9D9D9] justify-between items-center py-5 cursor-pointer">
+              <h3 class="text-[16px] leading-[16px] uppercase">woman</h3>
+              <i class="fa-solid fa-chevron-down rotate-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="max-w-2xl mx-auto mt-2">
+                <div class="mb-7">
+                  <div id="man">
+                    <ul class="list-none">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Luna Lace</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Bella Blush</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item border-none shadow-none">
+            <div class="flex border-[#D9D9D9] justify-between items-center py-5 cursor-pointer">
+              <h3 class="text-[16px] leading-[16px] uppercase">kids</h3>
+              <i class="fa-solid fa-chevron-down rotate-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="max-w-2xl mx-auto mt-2">
+                <div class="mb-7">
+                  <div id="man">
+                    <ul class="list-none">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Luna Lace</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Bella Blush</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item border-none shadow-none">
+            <div class="flex border-[#D9D9D9] justify-between items-center py-5 cursor-pointer">
+              <h3 class="text-[16px] leading-[16px] uppercase">
+                accessories
+              </h3>
+              <i class="fa-solid fa-chevron-down rotate-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="max-w-2xl mx-auto mt-2">
+                <div class="mb-7">
+                  <div id="man">
+                    <ul class="list-none">
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Luna Lace</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="no-underline text-sm text-black font-jost" href="#">Bella Blush</a>
+                      </li>
+                      <li>
+                        <a class="no-underline text-sm text-black font-jost" href="#">Tulle Willow Wrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="closeButton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M8 9.28736L1.56322 15.7241C1.37931 15.908 1.16475 16 0.91954 16C0.674329 16 0.45977 15.908 0.275862 15.7241C0.091954 15.5402 0 15.3257 0 15.0805C0 14.8352 0.091954 14.6207 0.275862 14.4368L6.71264 8L0.275862 1.56322C0.091954 1.37931 0 1.16475 0 0.91954C0 0.674329 0.091954 0.45977 0.275862 0.275862C0.45977 0.091954 0.674329 0 0.91954 0C1.16475 0 1.37931 0.091954 1.56322 0.275862L8 6.71264L14.4368 0.275862C14.6207 0.091954 14.8352 0 15.0805 0C15.3257 0 15.5402 0.091954 15.7241 0.275862C15.908 0.45977 16 0.674329 16 0.91954C16 1.16475 15.908 1.37931 15.7241 1.56322L9.28736 8L15.7241 14.4368C15.908 14.6207 16 14.8352 16 15.0805C16 15.3257 15.908 15.5402 15.7241 15.7241C15.5402 15.908 15.3257 16 15.0805 16C14.8352 16 14.6207 15.908 14.4368 15.7241L8 9.28736Z"
+              fill="#202223" />
+          </svg>
+        </button>
+      </div>
+      {% comment %} <!-- mobile nav menu --> {% endcomment %}
+      <a href="index.html">
+        <figure>
+          <img src="{{'logo.svg'|asset_url}}" alt="">
+        </figure>
+      </a>
+
+      {% comment %} <!-- menu item --> {% endcomment %}
+      <ul class="lg:flex hidden">
+        <li class="hoverable">
+          <a class=" py-6 px-4 text-base text-[#6D7175] hover:text-black font-jost uppercase" href="#">New In <i
+              class="fa-solid fa-chevron-down ml-1"></i></a>
+          <div class="p-6 mt-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
+            <div class="xl:container mx-auto">
+              <div class="grid grid-cols-4 gap-x-7">
+                <div>
+                  <img class="w-full" src="{{'summer-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      summer collection </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Luna Lace</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Bella Blush Tulle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Willow Wrap</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Aurora Asymmetrical Hem</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ivy Velvet Midi</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#"> Ruby Red Sequin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'man-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">man
+                    </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Rebel Edge Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Urban Hype T-shirt</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Vintage Vibe Graphic Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Zenith Zen T-shirt </a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Boho Bliss Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Retro Rhythm Tee</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coastal Breeze T-shirt</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'woman-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      woman</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Beach Babe Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ocean Bliss Two-Piece</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Tropical Sunset Swimsuit</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Island Charm Bikini Set</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Seashell Fantasy Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Sun-Kissed Halter Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Mermaid Allure Two-Piece</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coral Cove Swimsuit</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'kids-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      Kids</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">MiniTrendz</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Li'lFash</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">JuniorStyle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">TotTrend</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="hoverable">
+          <a class=" py-6 px-4 text-base text-[#6D7175] hover:text-black font-jost uppercase" href="#">man <i
+              class="fa-solid fa-chevron-down ml-1"></i></a>
+          <div class="p-6 mt-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
+            <div class="xl:container mx-auto">
+              <div class="grid grid-cols-4 gap-x-7">
+                <div>
+                  <img class="w-full" src="{{'summer-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      summer collection </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Luna Lace</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Bella Blush Tulle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Willow Wrap</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Aurora Asymmetrical Hem</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ivy Velvet Midi</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#"> Ruby Red Sequin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'man-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">man
+                    </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Rebel Edge Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Urban Hype T-shirt</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Vintage Vibe Graphic Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Zenith Zen T-shirt </a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Boho Bliss Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Retro Rhythm Tee</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coastal Breeze T-shirt</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'woman-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      woman</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Beach Babe Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ocean Bliss Two-Piece</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Tropical Sunset Swimsuit</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Island Charm Bikini Set</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Seashell Fantasy Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Sun-Kissed Halter Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Mermaid Allure Two-Piece</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coral Cove Swimsuit</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'kids-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      Kids</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">MiniTrendz</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Li'lFash</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">JuniorStyle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">TotTrend</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="hoverable">
+          <a class=" py-6 px-4 text-base text-[#6D7175] hover:text-black font-jost uppercase" href="#">woman <i
+              class="fa-solid fa-chevron-down ml-1"></i></a>
+          <div class="p-6 mt-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
+            <div class="xl:container mx-auto">
+              <div class="grid grid-cols-4 gap-x-7">
+                <div>
+                  <img class="w-full" src="{{'summer-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      summer collection </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Luna Lace</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Bella Blush Tulle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Willow Wrap</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Aurora Asymmetrical Hem</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ivy Velvet Midi</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#"> Ruby Red Sequin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'man-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">man
+                    </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Rebel Edge Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Urban Hype T-shirt</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Vintage Vibe Graphic Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Zenith Zen T-shirt </a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Boho Bliss Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Retro Rhythm Tee</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coastal Breeze T-shirt</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'woman-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      woman</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Beach Babe Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ocean Bliss Two-Piece</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Tropical Sunset Swimsuit</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Island Charm Bikini Set</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Seashell Fantasy Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Sun-Kissed Halter Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Mermaid Allure Two-Piece</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coral Cove Swimsuit</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'kids-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      Kids</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">MiniTrendz</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Li'lFash</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">JuniorStyle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">TotTrend</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="hoverable">
+          <a class=" py-6 px-4 text-base text-[#6D7175] hover:text-black font-jost uppercase" href="#">kids <i
+              class="fa-solid fa-chevron-down ml-1"></i></a>
+          <div class="p-6 mt-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
+            <div class="xl:container mx-auto">
+              <div class="grid grid-cols-4 gap-x-7">
+                <div>
+                  <img class="w-full" src="{{'summer-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      summer collection </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Luna Lace</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Bella Blush Tulle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Willow Wrap</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Aurora Asymmetrical Hem</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ivy Velvet Midi</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#"> Ruby Red Sequin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'man-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">man
+                    </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Rebel Edge Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Urban Hype T-shirt</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Vintage Vibe Graphic Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Zenith Zen T-shirt </a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Boho Bliss Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Retro Rhythm Tee</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coastal Breeze T-shirt</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'woman-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      woman</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Beach Babe Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ocean Bliss Two-Piece</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Tropical Sunset Swimsuit</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Island Charm Bikini Set</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Seashell Fantasy Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Sun-Kissed Halter Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Mermaid Allure Two-Piece</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coral Cove Swimsuit</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'kids-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      Kids</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">MiniTrendz</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Li'lFash</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">JuniorStyle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">TotTrend</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="hoverable">
+          <a class=" py-6 px-4 text-base text-[#6D7175] hover:text-black font-jost uppercase" href="#">accessories <i
+              class="fa-solid fa-chevron-down ml-1"></i></a>
+          <div class="p-6 mt-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white">
+            <div class="xl:container mx-auto">
+              <div class="grid grid-cols-4 gap-x-7">
+                <div>
+                  <img class="w-full" src="{{'summer-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      summer collection </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Luna Lace</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Serenity Satin Gown</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Bella Blush Tulle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Willow Wrap</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Aurora Asymmetrical Hem</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ivy Velvet Midi</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#"> Ruby Red Sequin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'man-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">man
+                    </p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Rebel Edge Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Urban Hype T-shirt</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Vintage Vibe Graphic Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Zenith Zen T-shirt </a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Boho Bliss Tee</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Retro Rhythm Tee</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coastal Breeze T-shirt</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'woman-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      woman</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Beach Babe Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Ocean Bliss Two-Piece</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Tropical Sunset Swimsuit</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Island Charm Bikini Set</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Seashell Fantasy Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Sun-Kissed Halter Bikini</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Mermaid Allure Two-Piece</a>
+                      </li>
+
+                      <li class="hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Coral Cove Swimsuit</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <img class="w-full" src="{{'kids-collection.png'|asset_url}}" alt="">
+                  <div class="mt-8">
+                    <p class="pb-2 border-b border-[#8C9196] text-sm font-jost font-medium uppercase text-[#6D7175]">
+                      Kids</p>
+                    <ul class="list-none mt-4">
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">MiniTrendz</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">KiddoChic</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">Li'lFash</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">JuniorStyle</a>
+                      </li>
+
+                      <li class="mb-3 hover:underline">
+                        <a class="no-underline text-black text-sm font-jost" href="#">TotTrend</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      {% comment %} <!-- menu item --> {% endcomment %}
+      <div class="flex items-center">
+        <i id="searchToggle" class="fa-solid fa-magnifying-glass mr-5 lg:block hidden cursor-pointer"></i>
+        <a href="sign-in.html">
+          <i class="fa-regular fa-user mr-5 lg:inline-block hidden"></i>
+        </a>
+        <i class="fa-regular fa-star mr-5 lg:inline-block hidden"></i>
+        <a href="view-cart.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
+            <path
+              d="M1.49395 16.675C1.17395 16.675 0.893945 16.555 0.653945 16.315C0.413945 16.075 0.293945 15.795 0.293945 15.475V5.07505C0.293945 4.75505 0.413945 4.47505 0.653945 4.23505C0.893945 3.99505 1.17395 3.87505 1.49395 3.87505H3.69395V3.67505C3.69395 2.83505 3.98395 2.12505 4.56395 1.54505C5.14395 0.965049 5.85395 0.675049 6.69394 0.675049C7.53395 0.675049 8.24395 0.965049 8.82395 1.54505C9.40394 2.12505 9.69394 2.83505 9.69394 3.67505V3.87505H11.8939C12.2139 3.87505 12.4939 3.99505 12.7339 4.23505C12.9739 4.47505 13.0939 4.75505 13.0939 5.07505V15.475C13.0939 15.795 12.9739 16.075 12.7339 16.315C12.4939 16.555 12.2139 16.675 11.8939 16.675H1.49395ZM1.49395 15.475H11.8939V5.07505H9.69394V6.87505C9.69394 7.04505 9.63611 7.18755 9.52045 7.30255C9.40477 7.41755 9.26143 7.47505 9.09045 7.47505C8.91945 7.47505 8.77728 7.41755 8.66395 7.30255C8.55061 7.18755 8.49395 7.04505 8.49395 6.87505V5.07505H4.89395V6.87505C4.89395 7.04505 4.83611 7.18755 4.72045 7.30255C4.60477 7.41755 4.46143 7.47505 4.29045 7.47505C4.11945 7.47505 3.97728 7.41755 3.86395 7.30255C3.75061 7.18755 3.69395 7.04505 3.69395 6.87505V5.07505H1.49395V15.475ZM4.89395 3.87505H8.49395V3.67505C8.49395 3.16838 8.32061 2.74172 7.97395 2.39505C7.62728 2.04838 7.20061 1.87505 6.69394 1.87505C6.18728 1.87505 5.76061 2.04838 5.41395 2.39505C5.06728 2.74172 4.89395 3.16838 4.89395 3.67505V3.87505Z"
+              fill="#202223" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {% comment %} <!-- mobile search input --> {% endcomment %}
+    <div class="relative w-full mb-7 lg:hidden block">
+      <input class="border w-full border-[#8C9196] py-3 px-4 focus:border-blue-500 outline-none focus:ring-0"
+        type="text" placeholder="Search">
+      <p class="absolute top-3.5 right-0 text-black">
+        <i class="fa-solid fa-magnifying-glass mr-5 "></i>
+      </p>
+    </div>
+    {% comment %} <!-- mobile search input --> {% endcomment %}
+
+  </div>
+{% schema %}
+{
+    "name": "mega-menu",
+    "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "mega-menu"
+            }
+        ]
+}
+{% endschema %}

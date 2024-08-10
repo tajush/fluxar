@@ -1,0 +1,90 @@
+<div class="container max-w-7xl m-auto px-4">
+    <div class="lg:pb-24 pb-14">
+        <div class="flex lg:justify-between justify-center items-center lg:mb-20 mb-10">
+          <h2 class="lg:text-3xl text-xl lg:leading-[42px] uppercase">Trending in Accessories</h2>
+          <div class="lg:flex hidden cursor-pointer">
+            <a class="border-b-[1px] border-black text-[16px] font-semibold" href="">View All</a>
+            <img class="ml-2" src="{{'right-arrow.svg'| asset_url}}" alt="">
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 grid-cols-2 gap-x-5">
+          <a href="product-details.html">
+            <div class="flex flex-col justify-center items-center mb-5">
+              <figure class="mb-4 group relative">
+                <img class="w-[300px]" class="w-full" src="{{'cap.jpg'| asset_url}}" alt="">
+                <img
+                  class="absolute inset-0 w-full h-full opacity-0 transition-opacity group-hover:opacity-100 duration-[600ms] ease-in-out"
+                  src="{{'sunglass.jpg'| asset_url}}" alt="">
+              </figure>
+              <p class="lg:text-base text-sm leading-4 text-[#6D7175] mb-1 text-center font-jost">Polo de tricoo</p>
+              <p class="mb-3 text-[#575656] text-base font-jost">$ 39.00</p>
+              <img class="w-[120px] mb-3" src="{{'rating.svg'| asset_url}}" alt="">
+            </div>
+          </a>
+
+          <a href="product-details.html">
+            <div class="flex flex-col justify-center items-center mb-5">
+              <figure class="mb-4 group relative">
+                <img class="w-[300px]" class="w-full" src="{{'stone.jpg'| asset_url}}" alt="">
+                <img
+                  class="absolute inset-0 w-full h-full opacity-0 transition-opacity group-hover:opacity-100 duration-[600ms] ease-in-out"
+                  src="{{'ear-ring.jpg'| asset_url}}" alt="">
+              </figure>
+              <p class="lg:text-base tex-sm leading-4 text-[#6D7175] mb-1 text-center font-jost">Ditsy ankh pendant in
+                silver tone</p>
+              <p class="mb-3 text-[#575656] text-base font-jost">$ 39.00</p>
+              <img class="w-[120px] mb-3" src="{{'rating.svg'| asset_url}}" alt="">
+            </div>
+          </a>
+
+          <a href="product-details.html">
+            <div class="flex flex-col justify-center items-center mb-5">
+              <figure class="mb-4 group relative">
+                <img class="w-[300px]" class="w-full" src="{{'sunglass.jpg'| asset_url}}" alt="">
+                <img
+                  class="absolute inset-0 w-full h-full opacity-0 transition-opacity group-hover:opacity-100 duration-[600ms] ease-in-out"
+                  src="{{'cap.jpg'| asset_url}}" alt="">
+              </figure>
+              <p class="lg:text-base text-sm leading-4 text-[#6D7175] mb-1 text-center font-jost">Ray-Ban Jack round hex
+                sunglasses</p>
+              <p class="mb-3 text-[#575656] text-base font-jost">$ 39.00</p>
+              <img class="w-[120px] mb-3" src="{{'rating.svg'| asset_url}}" alt="">
+            </div>
+          </a>
+
+          <a href="product-details.html">
+            <div class="flex flex-col justify-center items-center mb-5">
+              <figure class="mb-4 group relative">
+                <img class="w-[300px]" class="w-full" src="{{'ear-ring.jpg'| asset_url}}" alt="">
+                <img
+                  class="absolute inset-0 w-full h-full opacity-0 transition-opacity group-hover:opacity-100 duration-[600ms] ease-in-out"
+                  src="{{'stone.jpg'| asset_url}}" alt="">
+              </figure>
+              <p class="lg:text-base text-sm leading-4 text-[#6D7175] mb-1 text-center font-jost">Classics 77 skull stud
+                earrings in silver</p>
+              <p class="mb-3 text-[#575656] text-base font-jost">$ 39.00</p>
+              <img class="w-[120px] mb-3" src="{{'rating.svg'| asset_url}}" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="flex lg:hidden justify-center cursor-pointer mt-10">
+          <a class="border-b-[1px] border-black text-[16px] font-semibold" href="">View All</a>
+          <img class="ml-2" src="{{'right-arrow.svg'| asset_url}}" alt="">
+        </div>
+      </div>
+</div>
+
+{% schema %}
+{
+    "name": "trending-accessories",
+    "settings": [
+        
+        ],
+        "presets": [
+            {
+                "name": "trending-accessories"
+            }
+        ]
+}
+{% endschema %}
