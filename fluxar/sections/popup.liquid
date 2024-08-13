@@ -9,7 +9,7 @@
       {% endcapture %}
 
       <div
-        class="NewsletterPopup flex "
+        class="NewsletterPopup popup-with-img  "
         data-section-id="{{ section.id }}"
         data-section-type="newsletter-popup"
         data-section-settings='{{ section_settings }}'
@@ -21,12 +21,7 @@
                 <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
                   <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
                     <div
-                      style="
-                    height: 100%;
-                    min-height: 684px;
-                    width: 580px;
-                "
-                      class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
+                      class="img-area image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
                       {% if section.settings.height == 'adapt' and section.settings.image != blank %}
                       {% comment %}
                       style="height: 100%;min-height: 684px;width: 500px"
@@ -48,11 +43,11 @@
             {%- endcapture -%}
                       {%- endif -%}
                         {% comment %} {{ section.settings.image  | image_url: width: 500 | image_tag: height: 100% | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-                                                }} {% endcomment %}
+                                                                                                                                                                        }} {% endcomment %}
                         {{ section.settings.image | image_url: width: 580 | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority, style: "height: 100%;" }}
 
                         {% comment %} {%- else -%}
-                                                                                                                        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}  {% endcomment %}
+                                                                                                                                                                                                                                                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}  {% endcomment %}
                       {%- endif -%}
                     </div>
                   </div>
@@ -62,8 +57,8 @@
                         {% case block.type %}
                           {%- when 'heading' -%}
                           {% comment %} <h2 class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-                                                                                                                                              {{ block.settings.heading }}
-                                                                                                                                    </h2> {% endcomment %}
+                                                                                                                                                                                                                                                                                          {{ block.settings.heading }}
+                                                                                                                                                                                                                                                                      </h2> {% endcomment %}
 
                           {%- when 'caption' -%}
                             <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -96,7 +91,7 @@
             </div>
           </div>
         </div>
-        <div class="pl-[57px]">
+        <div class="padding-left pl-[57px]">
           <button class="NewsletterPopup__Close" data-action="close-popup">{% render 'icon' with 'close' %}</button>
 
           {%- if section.settings.title != blank -%}
@@ -147,24 +142,41 @@
   {%- endunless -%}
 {%- endif -%}
 <style>
-  .space{
+  .popup-with-img {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  @media only screen and (max-width: 800px) {
+    .padding-left{
+      padding-left: 0px;
+    }
+    .NewsletterPopup {
+      min-width: 460px;
+    }
+    .img-area {
+      width: inherit !important;
+      min-height: inherit !important;
+    }
+    .popup-with-img {
+
+      flex-wrap: wrap;
+    }
+  }
+  .img-area {
+    height: 100%;
+    min-height: 684px;
+    width: 580px;
+  }
+  .space {
     padding-top: 60px;
     padding-bottom: 60px;
   }
   .NewsletterPopup {
-    min-width: 1160px;
+    /* min-width: 1160px; */
     /* min-height: 684px; */
     max-width: 1000px;
     margin: 0 auto;
-    /* position: fixed; */
 
-
-    /*
-
-   bottom: 20px; 
-   right: 20px; 
-*/
-    /* width: 100%; */
     background-color: white;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -192,6 +204,8 @@
   }
 
   .NewsletterPopup__Heading {
+    word-break: break-word;
+
     margin-bottom: 10px;
     font-size: 52px;
     font-weight: bold;
@@ -199,6 +213,7 @@
 
   .NewsletterPopup__Content {
     margin-bottom: 20px;
+    word-break: break-word;
   }
 
   .NewsletterPopup__Form {
@@ -230,13 +245,13 @@
     background-color: #555;
   }
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     .NewsletterPopup {
       width: 90%;
       right: 5%;
       bottom: 10px;
     }
-  }
+  } */
 
 </style>
 <script>
