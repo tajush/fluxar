@@ -1,45 +1,37 @@
 <div class="brand-wrapper py-8 lg:my-24 my-14">
-      <div class="brand-slider">
-        <div>
-          <img class="mx-auto" src="{{'armani.svg'| asset_url}}" alt="">
-        </div>
+  <div class="brand-slider">
+    {%- for block in section.blocks -%}
+      {{ block.settings.image 
+ | image_url: width: 10 
+ | image_tag: fetchpriority: fetch_priority, style: "width: 50px; height: auto; mx-auto; "
+      }}
+    {%- endfor -%}
 
-        <div>
-          <img class="mx-auto" src="{{'vogue.svg'| asset_url}}" alt="">
-        </div>
-
-        <div>
-          <img class="mx-auto" src="{{'d-and-g.svg'| asset_url}}" alt="">
-        </div>
-
-
-        <div>
-          <img class="mx-auto" src="{{'just-do-it.svg'| asset_url}}" alt="">
-        </div>
-
-        <div>
-          <img class="mx-auto" src="{{'lacoste.svg'| asset_url}}" alt="">
-        </div>
-
-        <div>
-          <img class="mx-auto" src="{{'zara.svg'| asset_url}}" alt="">
-        </div>
-
-        <div>
-          <img class="mx-auto" src="{{'versace.svg'| asset_url}}" alt="">
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
 {% schema %}
-{
+  {
     "name": "brand-carousel",
-    "settings": [
-        
-        ],
-        "presets": [
-            {
-                "name": "brand-carousel"
-            }
+    "settings": [],
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "t:sections.slideshow.blocks.slide.name",
+        "limit": 50,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          }
         ]
-}
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "brand-carousel"
+      }
+    ]
+  }
 {% endschema %}

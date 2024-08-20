@@ -363,8 +363,9 @@ body {
     {%- endif -%}
 
     {% sections 'header-group' %}
-    
-
+    {%- render 'header-full-menu' -%}
+    {% section 'announcement-bar' %}
+   
     <main
       id="MainContent"
       class="content-for-layout focus-none"
